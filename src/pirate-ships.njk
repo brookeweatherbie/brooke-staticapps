@@ -9,21 +9,21 @@
   <h1>Ships of the Golden Age of pirates</h1>
   <p>Intro text here.</p>
 
-  <div class="row row-cols-1 row-cols-md-2 g-4">
+  <div class="row row-cols-1 row-cols-md-2 g-4 row-cols-lg-3">
     {% for ship in pirates.ships %}
-  <div class="col">
-    <div class="card">
-      <div class="card-body">
-        <h5 class="card-title">{{ ship.ship_name }}</h5>
-        <h6>{{ ship.captain }}</h6>
-        <p class="card-text">{{ ship.blurb }}</p>
+    <div class="col">
+      <div class="card h-100 text-bg-secondary border-light mb-3" style="max-width: 18rem;">
+        <div class="card-body">
+          <h5 class="card-title">{{ ship.ship_name }}</h5>
+          <h6>{{ ship.captain }}</h6>
+          <p class="card-text">{{ ship.blurb }}</p>
+        </div>
+        <div class="card-footer text-bg-info">
+          <a href="{{ ship.source }}" class="card-link">More about the ship</a>
+        </div>
       </div>
-    </div>
-    <div class="card-footer">
-      <a href="{{ ship.source }}" class="card-link">More about the ship</a>
     </div>
     {% endfor %}
   </div>
-
 </article>
 {% endblock %}
