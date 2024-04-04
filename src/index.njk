@@ -2,13 +2,15 @@
 
 {% block page_title %}Capt. McGillicutty's Ship's Log{% endblock %}
 
+{% block page_description %}This page contain's Capt. McGillicutty's diary entries.{% endblock %}
+
 {% block content %}
 <article class="container">
   <h1>A pirate's life is for me</h1>
     <p>Hempen halter mizzenmast deadlights gaff pillage starboard jack lee Blimey draught. Man-of-war piracy black jack sutler Yellow Jack keel provost overhaul execution dock rigging. Log quarterdeck dead men tell no tales red ensign gibbet grog blossom bilge Nelsons folly code of conduct gunwalls.</p>
 
   {% for blogs in blog.blogs %}
-  <h4 href="/blog/{{ blogs.slug }}.html">{{ blogs.headline }}</h4>
+  <h3> <a href="blog/{{ blogs.slug }}.html">{{ blogs.headline }}</a></h3>
     <p class="date">{{ blogs.date }}</p>
   {% endfor %}
 </article>
